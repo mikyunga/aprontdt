@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/264911d5ae.js" crossorigin="anonymous"></script>
+    <title>오픈채팅</title>
+    <style>
+        * {
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            /* border: 1px solid gray; */
+            box-sizing: border-box;
+            position: relative;
+        }
+        footer{
+            width: 100%;
+            height: 70px;
+            background-color: #f2f2f2;
+            border-top: 1px solid lightgray;
+        }
+        footer>nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+        .footer-icon{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-icon i{
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #606060;
+        }
+
+        .footer-text{
+            font-size: small;
+            color: #606060;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>오픈채팅</h1>
+        <nav>
+            <!--검색-->
+            <div class="header-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <!--오픈채팅추가-->
+            <div class="header-icon"><i class="fa-solid fa-comments"></i></div>
+            <!--내오픈채팅-->
+            <div class="header-icon"><i class="fa-solid fa-comment-sms"></i></div>
+            <!--설정-->
+            <div class="header-icon"><i class="fa-solid fa-gear"></i></div>
+        </nav>
+    </header>
+
+    <nav>
+        <!--검색-->
+        <div class="open-header2"><i class="fa-solid fa-magnifying-glass">검색</i></div>
+        <div class="open-header2">내 채팅방</div>
+        <div class="open-header2">지금 뜨는</div>
+        <div class="open-header2">성동/광진</div>
+    </nav>
+    <!--광고-->
+    <aside class="ad-container">
+        <a href="https://www.paypal.com/" target="_blank">
+            <img src="./img/paypal_ad.png" width="200" alt="paypal_ad">
+        </a>
+    </aside>
+
+    <main>
+        <!--채팅방-->
+        <section class="chat-room">
+            <!--채팅방 프로필-->
+            <div class="chat-room-container">
+                <img src="./img/profile.png" width="35" alt="profile">
+                <h2>채팅방제목</h2>
+                <span class="num">인원수</span>
+                <span class="contents">최근내용</span>
+                <span class="when">최근발신일</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <div class="footer-icon"> <!--javascript의 onclick 어쩌고로 이벤트주기...-->
+                <i class="fa-solid fa-user"></i>
+                <div class="footer-text">친구</div>
+            </div>
+            <div class="footer-icon">
+                <i class="fa-solid fa-comment-dots"></i>
+                <div class="footer-text">채팅</div>
+            </div>
+            <div class="footer-icon">
+                <i class="fa-solid fa-comments"></i>
+                <div class="footer-text">오픈채팅</div>
+            </div>
+            <div class="footer-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="footer-text">쇼핑</div>
+            </div>
+            <div class="footer-icon">
+                <i class="fa-solid fa-ellipsis-h"></i>
+                <div class="footer-text">더보기</div>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>
