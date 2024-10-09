@@ -1,0 +1,181 @@
+* {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid gray; */
+  box-sizing: border-box;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+/* 헤더 */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.8rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 9rem;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+/* 헤더 오른쪽 아이콘 */
+.header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header-icon i {
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 1); /* black */
+}
+
+.header-icon:hover {
+  background-color: rgba(235, 235, 235, 0.95); /* #ebebebf1 */
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+/* 포터 */
+footer {
+  width: 100%;
+  height: 4.375rem;
+  background-color: rgba(242, 242, 242, 1); /* #f2f2f2 */
+  border-top: 1px solid rgba(211, 211, 211, 1); /* lightgray */
+  margin-bottom: 0;
+}
+
+footer > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.footer-icon {
+  flex: 1; /*뒤에배경까지 5등분으로 차지*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /*뒤에 배경 height도 100%로 차지*/
+}
+
+.footer-icon i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: rgba(151, 151, 151, 1); /* #979797 */
+}
+
+.footer-text {
+  font-size: 0.875rem;
+  color: rgba(151, 151, 151, 1); /* #979797 */
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+}
+
+.footer-icon:hover i,
+.footer-icon:hover .footer-text {
+  color: rgba(17, 17, 17, 1); /* #111111 */
+}
+/* 스마트폰 세로 모드 (320px ~ 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px; /* 화면에 맞게 폰트 크기 조정 */
+  }
+
+  header,
+  footer {
+    height: 7%; /* 화면 비율에 맞게 헤더와 푸터의 높이 조정 */
+  }
+
+  main {
+    height: 80%; /* 나머지 화면을 main이 차지 */
+  }
+
+  section {
+    padding: 0.5rem; /* 모바일에서는 패딩 축소 */
+  }
+}
+
+/* 태블릿 및 작은 화면 디바이스 (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  header,
+  footer {
+    height: 7%; /* 태블릿에서도 비슷한 비율 유지 */
+  }
+
+  main {
+    height: 80%;
+  }
+
+  section {
+    padding: 1rem; /* 패딩 약간 확대 */
+  }
+}
+
+/* 데스크탑 및 큰 화면 디바이스 (1025px 이상) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  header,
+  footer {
+    height: 7%; /* 데스크탑에서도 동일한 비율 */
+  }
+
+  main {
+    height: 80%;
+  }
+
+  section {
+    padding: 2rem; /* 더 큰 화면에서는 패딩을 넉넉히 */
+  }
+}

@@ -1,0 +1,166 @@
+.ad-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.25rem;
+  margin-bottom: 0.3rem;
+  padding: 0 0.8rem;
+  /* border: 1px solid rgba(255, 99, 71, 1); */ /* tomato */
+}
+
+.ad-container > a {
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(211, 211, 211, 1); /* lightgray */
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 채팅창 */
+main {
+  flex: 1;
+  /* main이 나머지 공간을 채우게 함 -> header랑 footer가 위아래에 고정됨 */
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /*스크롤할 때 main부분만 움직이라고*/
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin: 0;
+  padding: 0.8rem 0; /* 위아래 0.5rem 간격 설정 */
+}
+.chat-room-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.8rem;
+  width: calc(100% - 1.6rem);
+}
+
+.chat-room-container {
+  display: flex;
+  align-items: center;
+}
+.profile-img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 35%;
+  align-items: center;
+  overflow: hidden; /* 자른 부분을 숨기기 위해 설정 */
+}
+.profile-img img {
+  float: left;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 하면서 초과 부분은 잘림 */
+}
+
+.chat-detail {
+  display: flex;
+  height: calc(100% - 0.8rem);
+  flex: 1;
+  margin-left: 0.8rem;
+}
+
+.chat-left {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  height: 100%;
+}
+.chat-left-header {
+  display: flex;
+}
+
+.chat-left h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 0.3rem;
+}
+
+.num {
+  font-size: 0.94rem;
+  color: rgba(151, 151, 151, 1); /* #979797 */
+  margin-left: 3px;
+  display: flex;
+  align-items: end;
+}
+
+.when {
+  font-size: 0.75rem;
+  color: rgba(151, 151, 151, 1); /* #979797 */
+  /* 오른쪽에 붙이기 */
+}
+
+/* 채팅내용 */
+.chat-right {
+  /* flex: 1; */
+  margin-left: auto;
+}
+.contents {
+  /* 내용이 두 줄 이상이면 나머지는 생략되도록 하고싶었음...*/
+  font-size: 1rem;
+  max-width: 90%;
+  height: 2.2rem;
+  overflow: hidden;
+  /* 세로..정렬 */
+  display: flex;
+  color: rgba(151, 151, 151, 1); /* #979797 */
+  white-space: normal;
+  /* 박스를 넘으면 텍스트 자동 줄바꿈, 연속된 공백을 하나로 줄임 */
+  padding-top: 0.5rem;
+}
+
+/* 단체채팅 */
+.chat-profile-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.chat-profile-group .profile-img {
+  position: absolute;
+  /* 이미지 위치 고정시키려고 */
+}
+.chat-profile-group .profile-img:nth-child(1) {
+  margin-left: -1.8rem;
+  margin-top: 1.4rem;
+}
+
+.chat-profile-group .profile-img:nth-child(2) {
+  margin-left: 1.8rem;
+  margin-top: 1.4rem;
+}
+
+.chat-profile-group .profile-img:nth-child(3) {
+  margin-top: -1.7rem;
+}
+
+.chat-profile-group .profile-img {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 35%;
+  align-items: center;
+  overflow: hidden; /* 자른 부분을 숨기기 위해 설정 */
+}
+.chat-profile-group .profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 하면서 초과 부분은 잘림 */
+}
+/* footer 현재페이지는 아이콘검정색 */
+.footer-icon:not(:hover):nth-child(2) i,
+.footer-icon:not(:hover):nth-child(2) .footer-text {
+  color: rgba(17, 17, 17, 1); /* #111111 */
+}
