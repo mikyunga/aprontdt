@@ -1,0 +1,235 @@
+/* 스마트폰 세로 모드 (320px ~ 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* 태블릿 및 작은 화면 디바이스 (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* 데스크탑 및 큰 화면 디바이스 (1025px 이상) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+* {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid gray; */
+  box-sizing: border-box;
+  position: relative; /* ::before를 사용하기 위해 위치를 설정 */
+  z-index: 2;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+body {
+  position: relative; /* ::before를 사용하기 위해 위치를 설정 */
+  min-height: 100vh;
+  background: url(img/kyoto.jpg) no-repeat fixed center bottom;
+  background-size: cover; /* 배경 이미지가 화면을 덮도록 설정 */
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26); /* 어두운 반투명 레이어 */
+  z-index: 1; /* 오버레이가 배경 위에 있도록 설정 */
+}
+/* 헤더 */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 0 1.1rem;
+  padding-top: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+  width: 49%;
+}
+
+/* header icon들 */
+.header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 헤더 오른쪽 아이콘 */
+nav .header-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  border-color: rgba(255, 255, 255, 1);
+  margin-right: 0.8rem;
+  padding: 0;
+}
+nav .header-icon:last-child {
+  margin-right: 0;
+}
+
+.header-icon i {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 1);
+  line-height: 0.9; /* line-height를 조정해 중앙 정렬 개선 */
+}
+.header-icon > .fa-x {
+  font-size: 1.2rem;
+}
+
+.header-icon:hover {
+  cursor: pointer;
+}
+
+/* 메인 */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 12rem;
+  width: 100%;
+}
+.profile-img-container {
+  flex: 2.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 35%;
+  align-items: center;
+  overflow: hidden; /* 자른 부분을 숨기기 위해 설정 */
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 하면서 초과 부분은 잘림 */
+}
+.myname {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+.myname i {
+  margin-left: 0.2rem;
+  font-size: 0.7rem;
+  color: rgba(190, 194, 198, 1);
+}
+.comment {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  font-size: 0.7rem;
+  padding-top: 0.1rem;
+}
+/* 포터 */
+footer {
+  width: 100%;
+  height: 6.3rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: 1px solid rgba(211, 211, 211, 0.5);
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 400px;
+}
+
+.footer-icon a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+.footer-icon {
+  flex: 1; /*뒤에배경까지 5등분으로 차지*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /*뒤에 배경 height도 100%로 차지*/
+}
+
+.footer-icon i {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-text {
+  font-size: 0.7rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 1);
+  padding-top: 0.5rem;
+}
+
+.footer-icon:hover {
+  cursor: pointer;
+}
